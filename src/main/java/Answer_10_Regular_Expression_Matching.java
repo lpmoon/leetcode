@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 public class Answer_10_Regular_Expression_Matching {
     /*
     Implement regular expression matching with support for '.' and '*'.
@@ -21,10 +24,28 @@ public class Answer_10_Regular_Expression_Matching {
 
     */
 
-    public class Node {
-        public Node transferNode(char s) {
-            return null;
+    public static class State {
+        private String subReg;
+
+        private Map<String, State> nextStates = new HashMap<String, State>();
+
+        public State getNext(String nextChar) {
+            return nextStates.get(nextChar);
         }
+
+        public void addNext(String nextChar, State n) {
+            nextStates.put(nextChar, n);
+        }
+    }
+
+    public State construct(String regex) {
+        State nullState = new State();
+
+        int i = regex.length();
+        while (i < regex.length()) {
+        }
+
+        return null;
     }
 
     public boolean isMatch(String s, String p) {
