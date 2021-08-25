@@ -1,4 +1,4 @@
-package leetcode
+package main
 
 // https://leetcode-cn.com/problems/house-robber/
 
