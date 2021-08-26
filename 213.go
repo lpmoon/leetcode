@@ -68,4 +68,7 @@ func max(x, y int) int {
 	}
 }
 
-
+func main() {
+	t := []int{1, 2, 3, 1}
+	fmt.Println(rob1(t))
+}
